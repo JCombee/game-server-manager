@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8dc9278e54cc06264148d8c55705658f",
+    "content-hash": "f26d8c6a438f46fd3b2c1209d4d08020",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -649,6 +649,65 @@
                 }
             ],
             "time": "2020-10-22T13:57:20+00:00"
+        },
+        {
+            "name": "game-server-manager/core",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "packages/core",
+                "reference": "ebd06d9d4d394ea1de4da18d7be36e334e273b97"
+            },
+            "require": {
+                "laravel/framework": "^8.12",
+                "php": "^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "GameServerManager\\Core\\CoreServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GameServerManager\\Core\\": "src/"
+                }
+            },
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "game-server-manager/game-minecraft",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "packages/game-minecraft",
+                "reference": "b767600e711ef121e31276a0b560841d5048c609"
+            },
+            "require": {
+                "game-server-manager/core": "dev-master"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "GameServerManager\\GameMinecraft\\GameMinecraftServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GameServerManager\\GameMinecraft\\": "src/"
+                }
+            },
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
         },
         {
             "name": "graham-campbell/result-type",
@@ -7591,7 +7650,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "game-server-manager/game-minecraft": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

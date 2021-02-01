@@ -1,0 +1,18 @@
+{
+    "name": "game-server-manager/game-minecraft",
+    "require": {
+        "game-server-manager/core": "dev-master"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "GameServerManager\\GameMinecraft\\GameMinecraftServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "GameServerManager\\GameMinecraft\\": "src/"
+        }
+    }
+}

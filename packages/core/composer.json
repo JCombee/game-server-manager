@@ -1,0 +1,19 @@
+{
+    "name": "game-server-manager/core",
+    "require": {
+        "php": "^8.0",
+        "laravel/framework": "^8.12"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "GameServerManager\\Core\\CoreServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "GameServerManager\\Core\\": "src/"
+        }
+    }
+}
